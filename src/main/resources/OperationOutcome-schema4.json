@@ -9,31 +9,21 @@
 	"definitions": {
 		"faultResponse": {
 			"type": "object",
-			"required": [
-				"resourceType", "id", "text", "issue"
-			],
 			"properties": {
 				"resourceType": {
-					"type": "string",
-					"pattern": "^(.*)$"
+					"type": "string"
 				},
 				"id": {
-					"type": "string",
-					"pattern": "^(.*)$"
+					"type": "string"
 				},
 				"text": {
 					"type": "object",
-					"required": [
-						"status", "div"
-					],
 					"properties": {
 						"status": {
-							"type": "string",
-							"pattern": "^(.*)$"
+							"type": "string"
 						},
 						"div": {
-							"type": "string",
-							"pattern": "^(.*)$"
+							"type": "string"
 						}
 					}
 				},
@@ -41,33 +31,24 @@
 					"type": "array",
 					"items": {
 						"type": "object",
-						"required": [
-							"severity", "code", "details"
-						],
 						"properties": {
 							"severity": {
 								"type": "string",
-								"pattern": "^(.*)$",
 								"enum": [
 									"fatal", "error", "warning", "information"
 								]
 							},
 							"code": {
 								"type": "string",
-								"pattern": "^(.*)$",
 								"enum": [
 									"invalid", "structure", "required", "value", "invariant", "security", "login", "unknown", "expired", "forbidden", "suppressed", "processing", "not-supported", "duplicate", "multiple-matches", "not-found", "deleted", "too-long", "code-invalid", "extension", "too-costly", "business-rule", "conflict", "transient", "lock-error", "no-store", "exception", "timeout", "incomplete", "throttled", "informational"
 								]
 							},
 							"details": {
 								"type": "object",
-								"required": [
-									"text"
-								],
 								"properties": {
 									"text": {
-										"type": "string",
-										"pattern": "^(.*)$"
+										"type": "string"
 									}
 								}
 							}
