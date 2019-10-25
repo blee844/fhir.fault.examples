@@ -1,0 +1,80 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"example": {
+			"$ref": "#/definitions/faultResponse"
+		}
+	},
+	"definitions": {
+		"faultResponse": {
+			"type": "object",
+			"required": [
+				"resourceType", "id", "text", "issue"
+			],
+			"properties": {
+				"resourceType": {
+					"type": "string",
+					"pattern": "^(.*)$"
+				},
+				"id": {
+					"type": "string",
+					"pattern": "^(.*)$"
+				},
+				"text": {
+					"type": "object",
+					"required": [
+						"status", "div"
+					],
+					"properties": {
+						"status": {
+							"type": "string",
+							"pattern": "^(.*)$"
+						},
+						"div": {
+							"type": "string",
+							"pattern": "^(.*)$"
+						}
+					}
+				},
+				"issue": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"required": [
+							"severity", "code", "details"
+						],
+						"properties": {
+							"severity": {
+								"type": "string",
+								"pattern": "^(.*)$",
+								"enum": [
+									"fatal", "error", "warning", "information"
+								]
+							},
+							"code": {
+								"type": "string",
+								"pattern": "^(.*)$",
+								"enum": [
+									"invalid", "structure", "required", "value", "invariant", "security", "login", "unknown", "expired", "forbidden", "suppressed", "processing", "not-supported", "duplicate", "multiple-matches", "not-found", "deleted", "too-long", "code-invalid", "extension", "too-costly", "business-rule", "conflict", "transient", "lock-error", "no-store", "exception", "timeout", "incomplete", "throttled", "informational"
+								]
+							},
+							"details": {
+								"type": "object",
+								"required": [
+									"text"
+								],
+								"properties": {
+									"text": {
+										"type": "string",
+										"pattern": "^(.*)$"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
