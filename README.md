@@ -63,6 +63,7 @@ This message is returned when an HTTP operation isn't allowed for a resource
 This message is returned when the client/consumer sends in a message with a valid structure but with invalid or illogical values.
 
 Common data validation fault
+
 |Condition                     |Message                                                                             |
 |------------------------------|------------------------------------------------------------------------------------|
 |Assessment Date          > DOB|Illogical Date error: Assesment date must be after date of birth                    |
