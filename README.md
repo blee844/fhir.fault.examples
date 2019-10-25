@@ -64,11 +64,6 @@ This message is returned when the client/consumer sends in a message with a vali
 
 Common data validation fault
 
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
-
 |Condition                     |Message                                                                             |
 |------------------------------|------------------------------------------------------------------------------------|
 |Assessment Date          > DOB|Illogical Date error: Assesment date must be after date of birth                    |
