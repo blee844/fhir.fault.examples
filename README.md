@@ -66,9 +66,9 @@ Common data validation fault
 
 |Condition                     |Message                                                                             |
 |------------------------------|------------------------------------------------------------------------------------|
-|Assessment Date          > DOB|Illogical Date error: Assesment date must be after date of birth                    |
-|Vaccination Date         > DOB|Illogical Date error: Vaccination Date must be on or after date of birth            |
-|Medical Observation Date > DOB|Illogical Date error: Medical Observation Date must be on or after date of birth    |
+|Assessment Date          < DOB|Illogical Date error: Assesment date must be after date of birth                    |
+|Vaccination Date         < DOB|Illogical Date error: Vaccination Date must be on or after date of birth            |
+|Medical Observation Date < DOB|Illogical Date error: Medical Observation Date must be on or after date of birth    |
 |Observation Code exists       |Unrecognized observation code                                                       |
 |Antigen Series exists         |Unrecognized antigen series                                                         |
 |Patient DOB Required          |Missing Date error: patientDob is required                                          |
